@@ -39,7 +39,7 @@ public class knapsack{
 }
         System.out.println("Enter the max weight");
         int weighty = scan.nextInt();
-
+////
         int sum=0;
         int maxweight=0;
       for(int i=0;i<a;i++){

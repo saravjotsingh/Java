@@ -43,14 +43,18 @@ public class knapsack{
         int sum=0;
         int maxweight=0;
       for(int i=0;i<a;i++){
-          if(maxweight<weighty){
-            maxweight += weight[i];
-            sum += price[i];
+
+          maxweight += weight[i];
+          if(maxweight<=weighty){
+              sum += price[i];
+          }else{
+            int excess = weight[i]-(maxweight-weighty);
+            sum += fraction[i]*excess;
+            break;
+
           }
 
-        //System.out.println(fraction[i] + " " + price[i] +"  " + weight[i]);
-
-      }
-      System.out.println(sum + "  " +maxweight);
+          }
+      System.out.println(sum);
   }
 }
